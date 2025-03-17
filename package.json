@@ -22,5 +22,11 @@
   "homepage": "https://github.com/AlexandraKoroleva/frontend-project-44#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "globals": "^16.0.0"
   }
 }
