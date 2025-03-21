@@ -3,3 +3,4 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/8bcb46feb93fc81895a8/maintainability)](https://codeclimate.com/github/AlexandraKoroleva/frontend-project-44/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/8bcb46feb93fc81895a8/test_coverage)](https://codeclimate.com/github/AlexandraKoroleva/frontend-project-44/test_coverage)
+ https://asciinema.org/a/xHeDQ2I4uETIL5GoS4vRbhGOv
