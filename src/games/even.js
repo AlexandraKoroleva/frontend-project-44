@@ -8,9 +8,8 @@ console.log(`Answer "yes" if the number is even, otherwise answer "no".`);
 
 const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const whatCorrectAnswer = (num) => {
+const whatCorrectAnswer = (num) => 
   (num % 2 === 0) ? 'yes' : 'no';
-};
 
 const isEven = () => {
   for (let i = 0; i < 3; i += 1) {
