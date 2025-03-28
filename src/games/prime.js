@@ -5,27 +5,27 @@ const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer
 const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const isPrime = (number) => {
-    if (number < 2) {
-        return false;
-    }
+  if (number < 2) {
+    return false;
+  }
 
-let divider = 2;
+  let divider = 2;
 
-while (divider <= number / 2) {
+  while (divider <= number / 2) {
     if (number % divider === 0) {
-        return 'no';
-        }
-    divider += 1;
+      return 'no';
     }
-return 'yes';
+  divider += 1;
+  }
+  return 'yes';
 };
 
 const generateQuestion = () => {
-    const question = generateNumber(1, 100);
-    const correctAnswer = isPrime(question);
-    return [question, String(correctAnswer)];
+  const question = generateNumber(1, 100);
+  const correctAnswer = isPrime(question);
+  return [question, String(correctAnswer)];
 };
 
 export default () => {
-    startGame(gameDescription, generateQuestion)
+  startGame(gameDescription, generateQuestion);
 };
