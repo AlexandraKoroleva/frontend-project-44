@@ -16,7 +16,7 @@ const isEven = () => {
     const randomNumber = generateNumber(1, 100);
     console.log(`Question: ${randomNumber}`);
     const correctAnswer = whatCorrectAnswer(randomNumber);
-    const userAnswer = readlineSync.question('Your Answer? ');
+    const userAnswer = readlineSync.question('Your Answer: ');
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
