@@ -4,10 +4,10 @@ const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const NOD = (number1, number2) => {
-  if (number2 > number1) return NOD(number2, number1);
+const findGCD = (number1, number2) => {
+  if (number2 > number1) return findGCD(number2, number1);
   if (!number2) return number1;
-  return NOD(number2, number1 % number2);
+  return findGCD(number2, number1 % number2);
 };
 
 const generateQuestion = () => {
@@ -15,7 +15,7 @@ const generateQuestion = () => {
   const number2 = generateNumber(1, 100);
 
   const question = `${number1} ${number2}`;
-  const correctAnswer = NOD(number1, number2);
+  const correctAnswer = findGCD(number1, number2);
 
   return [question, String(correctAnswer)];
 };

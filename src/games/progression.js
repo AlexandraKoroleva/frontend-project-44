@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import startGame from '../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
@@ -5,10 +6,9 @@ const gameDescription = 'What number is missing in the progression?';
 const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const generateProgression = (number, step) => {
-  let result = [number];
+  const result = [];
   for (let i = 1; i <= 10; i += 1) {
-    number = number + step;
-    result.push(number);
+    result.push(number + i * step);
   }
   return result;
 };

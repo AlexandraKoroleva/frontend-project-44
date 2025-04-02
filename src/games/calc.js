@@ -11,6 +11,7 @@ const calculate = (number1, number2, mathSign) => {
     case '*': return number1 * number2;
     default: break;
   }
+  return null;
 };
 
 const generateQuestion = () => {
@@ -18,12 +19,11 @@ const generateQuestion = () => {
   const number2 = generateNumber(1, 100);
   const mathSigns = ['+', '-', '*'];
   const mathSign = mathSigns[generateNumber(0, 2)];
-
   const question = `${number1} ${mathSign} ${number2}`;
-  const correctAnswer = calculate(number1, number2, mathSign);  
+  const correctAnswer = calculate(number1, number2, mathSign);
   return [question, String(correctAnswer)];
 };
 
 export default () => {
-    startGame(gameDescription, generateQuestion);
+  startGame(gameDescription, generateQuestion);
 };
