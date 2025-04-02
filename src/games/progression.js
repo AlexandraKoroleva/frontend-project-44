@@ -7,7 +7,8 @@ const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1))
 
 const generateProgression = (number, step) => {
   const result = [];
-  for (let i = 1; i <= 10; i += 1) {
+  const lengthProgression = 10;
+  for (let i = 0; i < lengthProgression; i += 1) {
     result.push(number + i * step);
   }
   return result;
