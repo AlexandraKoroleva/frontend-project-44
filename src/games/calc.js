@@ -9,9 +9,8 @@ const calculate = (number1, number2, mathSign) => {
     case '+': return number1 + number2;
     case '-': return number1 - number2;
     case '*': return number1 * number2;
-    default: break;
+    default: return null;
   }
-  return null;
 };
 
 const generateQuestion = () => {

@@ -17,18 +17,10 @@ const generateProgression = (number, step) => {
 const generateQuestion = () => {
   const number = generateNumber(1, 50);
   const step = generateNumber(1, 5);
-  const space = generateNumber(1, 10);
-  const progression = generateProgression(number, step);
-  const question = [];
-  for (const num of progression) {
-    if (num === progression[space]) {
-      const newNum = '..';
-      question.push(newNum);
-    } else {
-      question.push(num);
-    }
-  }
-  const correctAnswer = progression[space];
+  const space = generateNumber(0, 9);
+  const question = generateProgression(number, step);
+  const correctAnswer = question[space];
+  question[space] = '..';
   return [question.join(' '), String(correctAnswer)];
 };
 
